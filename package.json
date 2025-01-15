@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
@@ -18,4 +19,5 @@
     "netlify-lambda": "^2.0.16",
     "nodemon": "^2.0.20",
     "serverless-http": "^3.2.0"
-.20"
+  }
+}

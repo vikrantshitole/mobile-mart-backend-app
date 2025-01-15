@@ -10,7 +10,6 @@ const productRoutes = require("./routes/productRoutes");
 const favoriteRoutes = require("./routes/favoriteRoutes");
 const addressRoutes = require("./routes/addressRoutes");
 const requireAuth = require("./middlewares/requireAuth");
-const ServerlessHttp = require("serverless-http");
 
 const app = express();
 
@@ -48,6 +47,3 @@ app.get("/info", (req, res) => {
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });
-app.use("/.netlify/functions/app", app);
-
-module.exports.handler = ServerlessHttp(app);
